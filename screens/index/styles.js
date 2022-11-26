@@ -5,10 +5,17 @@ export default StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     padding: 30,
+    alignItems: "center",
+    backgroundColor: "#fff",
   },
   title: {
     fontFamily: "karla",
-    fontSize: 50,
+    fontSize: 62,
     textAlign: "center",
+    marginBottom: 30,
+  },
+  image: {
+    width: 150,
+    height: 150,
   },
 });

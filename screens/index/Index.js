@@ -1,4 +1,4 @@
-import { Text, ActivityIndicator, TouchableOpacity } from "react-native";
+import { Text, ActivityIndicator, TouchableOpacity, Image } from "react-native";
 import { loadAsync } from "expo-font";
 import styles from "./styles";
 import { useEffect, useState } from "react";
@@ -20,7 +20,8 @@ export default ({ navigation }) => {
       onPress={() => navigation.navigate("list")}
       style={styles.container}
     >
-      <Text style={styles.title}>Geolocation App</Text>
+      <Text style={styles.title}>GeoApp</Text>
+      <Image style={styles.image} source={require("../../assets/map.png")} />
     </TouchableOpacity>
   ) : (
     <ActivityIndicator />

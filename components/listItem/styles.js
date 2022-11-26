@@ -1,22 +1,26 @@
 import { StyleSheet } from "react-native";
 
 export default StyleSheet.create({
-  topContainer: {
-    flexDirection: 'row',
-    justifyContent: 'center',
+  container: {
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: 20,
+    marginBottom: 7,
   },
   image: {
-    width: 70,
-    height: 70,
-    marginRight: 20
+    width: 50,
+    height: 50,
+    marginRight: 20,
   },
-  buttonContainer: {
-    flexDirection: 'row',
-    alignItems: 'center'
+  textContainer: {
+    marginRight: 20,
   },
-  userText: {
-    textAlign: "center",
-    marginBottom: 40,
-    marginTop: 5
-  }
+  textParameter: {
+    flexDirection: "row",
+  },
+  textKey: {
+    marginBottom: 2,
+    fontWeight: "500",
+  },
 });

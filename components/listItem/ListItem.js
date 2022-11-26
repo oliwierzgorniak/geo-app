@@ -1,33 +1,41 @@
-import { Image, Text, View } from "react-native";
+import { Image, Text, View, Switch } from "react-native";
+import toggleSwitch from "./functions/toggleSwitch";
 import styles from "./styles";
-import MyButton from '../MyButton';
-import handleDeleteButton from './functions/handleDeleteButton';
 
-
-export default function ListItem({ item, navigate, users, setUsers}) {
+export default function ListItem({
+  position,
+  selectedPositions,
+  setSelectedPositions,
+}) {
   return (
-    <View>
-      <View style={styles.topContainer}>
-        <Image
-          style={styles.image}
-          source={require("../../assets/user.png")}
-        />
-        <View style={styles.buttonContainer}>
-          <MyButton
-            text="DETAILS"
-            onPress={() => navigate("details", { item: item })}
-          />
-          <MyButton
-            text="DELETE"
-            onPress={() =>
-              handleDeleteButton(item.id, navigate, users, setUsers)
-            }
-          />
+    <View style={styles.container}>
+      <Image style={styles.image} source={require("../../assets/map.png")} />
+      <View style={styles.textContainer}>
+        <View style={styles.textParameter}>
+          <Text style={styles.textKey}>Timestamp: </Text>
+          <Text>{position.timestamp}</Text>
+        </View>
+        <View style={styles.textParameter}>
+          <Text style={styles.textKey}>Latitude: </Text>
+          <Text>{position.coords.latitude}</Text>
+        </View>
+        <View style={styles.textParameter}>
+          <Text style={{ ...styles.textKey, marginBottom: 0 }}>
+            Longitude:{" "}
+          </Text>
+          <Text>{position.coords.longitude}</Text>
         </View>
       </View>
-      <Text style={styles.userText}>
-        {item.id}: {item.username}
-      </Text>
+      <Switch
+        trackColor={{ false: "#767577", true: "#007aff" }}
+        thumbColor={"#f4f3f4"}
+        onValueChange={() =>
+          toggleSwitch(selectedPositions, setSelectedPositions, position)
+        }
+        value={
+          !!selectedPositions.filter((p) => p.uuid === position.uuid).length
+        }
+      />
     </View>
   );
 }

@@ -3,7 +3,7 @@ import * as Location from "expo-location";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import uuid from "react-native-uuid";
 
-export default async function saveLocation() {
+export default async function saveLocation(positions, setPositions) {
   await Location.requestForegroundPermissionsAsync();
 
   Alert.alert(
@@ -18,8 +18,12 @@ export default async function saveLocation() {
         text: "Yes",
         onPress: async () => {
           const position = await Location.getCurrentPositionAsync({});
+          //adding uuid
+          const positionUuid = uuid.v4();
+          position.uuid = positionUuid;
           const positionJSON = JSON.stringify(position);
-          await AsyncStorage.setItem(uuid.v4(), positionJSON);
+          await AsyncStorage.setItem(positionUuid, positionJSON);
+          setPositions([...positions, position]);
         },
       },
     ],
