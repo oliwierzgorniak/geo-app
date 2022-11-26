@@ -1,5 +1,3 @@
-// https://www.robinwieruch.de/react-remove-item-from-list/
-
 import { useEffect, useState } from "react";
 import { View, FlatList, Switch } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
