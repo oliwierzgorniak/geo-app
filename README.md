@@ -4,13 +4,11 @@
 A react native app written for classes in school. It saves the current location and then displays selected saved locations. It works with google maps api.
 
 ## Screenshots
+<img height="200" src="https://raw.githubusercontent.com/oliwierzgorniak/geo-app/main/docs/1.jpg" alt="1" />
+<img height="200" src="https://raw.githubusercontent.com/oliwierzgorniak/geo-app/main/docs/2.jpg" alt="2" />
+<img height="200" src="https://raw.githubusercontent.com/oliwierzgorniak/geo-app/main/docs/3.jpg" alt="3" />
+<img height="200" src="https://raw.githubusercontent.com/oliwierzgorniak/geo-app/main/docs/4.jpg" alt="4" />
 
-<div style="display: flex">
-  <img style="max-height: 300px;" src="https://raw.githubusercontent.com/oliwierzgorniak/geo-app/main/docs/1.jpg" alt="1" />
-  <img style="max-height: 300px;" src="https://raw.githubusercontent.com/oliwierzgorniak/geo-app/main/docs/2.jpg" alt="2" />
-  <img style="max-height: 300px;" src="https://raw.githubusercontent.com/oliwierzgorniak/geo-app/main/docs/3.jpg" alt="3" />
-  <img style="max-height: 300px;" src="https://raw.githubusercontent.com/oliwierzgorniak/geo-app/main/docs/4.jpg" alt="4" />
-</div>
 
 ## Technologies
 Expo and react native
